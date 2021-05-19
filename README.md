@@ -24,13 +24,17 @@ Charles Le Losq (IPGP), lelosq@ipgp.fr
 
 A working fortran compiler. We suggest using gfortran, tested on Mac and Linux. It works well with this software!
 
-# Compilation
+# How to use
+
+Download the repository, and use the provided example input file. It first requires compilation of the FORTRAN source, then running the compilated software.
+
+## Compilation
 
 To create the program, with gfortran, in the terminal on Linux or MacOS:
 
 `$ gfortran waspecCLL.f90 -o waspec.o`
 
-# Running the software
+## Running the software
 
 The software takes an input file, waspec.in, which contains the compositions of interest.
 
@@ -40,7 +44,7 @@ Run in the terminal, after compilation, run the command:
 
 `$ waspec.o`
 
-# How to use the input file waspec.in
+## How to use the input file waspec.in
 
 1) first line is an integer (number of compositions) followed by another integer, the KYMPA variable (1 or 0);
 this is explained later on
@@ -53,7 +57,7 @@ NOTES:
 -H2Omol is the molecular water in wt% (otherwise put a number, such as 0.1, in any case lower than H2Otot)
 -T∞C: the temperature of the liquid (greater than or equal to Tg)
 
-# About waspec.out:
+## About waspec.out:
 
 1) If you have set to 0 the second integer, right after the number of composition, waspec considers input H2Omol as an experimental constraint
 If you have set it to 1, waspec iterates until convergence.
