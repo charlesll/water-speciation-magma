@@ -42,7 +42,7 @@ It returns an output file, waspec.out
 
 Run in the terminal, after compilation, run the command:
 
-`$ waspec.o`
+`$ ./waspec.o`
 
 ## How to use the input file waspec.in
 
