@@ -22,8 +22,8 @@ real(KIND=DP) :: prot(ndi), ohtrue(ndi), pipp(ndi), cost22(ndi), cost20(ndi)
 real(KIND=DP) :: xmol(ndi,13), cri(ndi)
 
 
-OPEN (UNIT=8,FILE='waspec.in',STATUS='old')
-OPEN (UNIT=19,FILE='waspec.out',STATUS='old')
+OPEN (UNIT=8,FILE='INPUT.txt',STATUS='old')
+OPEN (UNIT=19,FILE='OUTPUT.txt',STATUS='UNKNOWN')
 
 
 ! attenzione basicity moderating parameters per il calcolo della
@@ -43,6 +43,7 @@ DATA zcat/1.,1.,2.,2.,2.,2.,1.,1.,1.,1.,2.,2.,2./
 ! SiO2 TiO2 P2O5 Al2O3 Fe2O3 Cr2O3 FeO MnO CaO MgO Na2O K2O H2O
 
 READ (8,*) ncomp,kympa
+READ (8,*) ! this is to skype the header line with compositions
 WRITE (*,*) ncomp
 DO  i=1,ncomp
   xossi(i)=-12

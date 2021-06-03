@@ -36,15 +36,17 @@ To create the program, with gfortran, in the terminal on Linux or MacOS:
 
 ## Running the software
 
-The software takes an input file, waspec.in, which contains the compositions of interest.
+The software takes an input file, INPUT.txt, which contains the compositions of interest.
 
-It returns an output file, waspec.out
+It returns an output file, OUTPUT.txt
 
 Run in the terminal, after compilation, run the command:
 
 `$ ./waspec.o`
 
-## How to use the input file waspec.in
+## How to use the input file INPUT.txt
+
+This is a comma-separated text file.
 
 1) first line is an integer (number of compositions) followed by another integer, the KYMPA variable (1 or 0);
 this is explained later on
@@ -59,7 +61,7 @@ NOTES:
 - H2Omol is the molecular water in wt% (otherwise put a number, such as 0.1, in any case lower than H2Otot)
 - T(°C) is the temperature of the liquid (greater than or equal to Tg)
 
-## About waspec.out:
+## About OUTPUT.txt:
 
 1) If you have set to 0 the second integer, right after the number of composition, waspec considers input H2Omol as an experimental constraint. If you have set it to 1, waspec iterates until convergence. Therefore, results can be different between the "0" and "1" KYMPA options.
 
